@@ -1,2 +1,11 @@
 ---
-- NAME: Test
+- name: Test for CISCO_IOS
+  connection: network_cli
+  gather_facts: false
+  host: all
+  tasks:
+  
+  - name: Create User
+    ios_config:
+      line:
+      - username ansible priv 15 secret ansible
