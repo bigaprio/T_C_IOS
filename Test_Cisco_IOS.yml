@@ -3,9 +3,7 @@
   connection: network_cli
   gather_facts: false
   host: all
-  tasks:
-  
+  tasks:  
   - name: Create User
     ios_config:
-      line:
-      - username ansible priv 15 secret ansible
+      line: username ansible priv 15 secret ansible
